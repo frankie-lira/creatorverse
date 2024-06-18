@@ -1,0 +1,15 @@
+/* ShowCreators.css */
+.show-creators {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .no-creators {
+    text-align: center;
+    color: #666;
+    font-size: 18px;
+  }
+  
