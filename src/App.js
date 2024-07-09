@@ -1,12 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import supabase from './client';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import ShowCreators from './pages/ShowCreators';
 import AddCreator from './pages/AddCreator';
-import './App.css';
+import ViewCreator from './pages/ViewCreator'; 
+import EditCreator from './components/EditCreator';
+
+import './styles/App.css';
 
 function App() {
   const [creators, setCreators] = useState([]);
-  const [activeView, setActiveView] = useState('showCreators');
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     async function fetchData() {
@@ -15,32 +19,36 @@ function App() {
         console.error('Error fetching data:', error.message);
       } else {
         setCreators(data);
+        setLoading(false);
       }
     }
 
     fetchData();
   }, []);
 
-  const renderContent = () => {
-    if (activeView === 'showCreators') {
-      return <ShowCreators creators={creators} />;
-    } else if (activeView === 'addCreator') {
-      return <AddCreator/>;
-    }
-    return null;
-  };
+  if (loading) {
+    return <div>Loading...</div>;
+  }
 
   return (
-    <div className="App">
-      <header style={headerStyle}>
-        <h1 style={titleStyle}>CreatorVerse</h1>
-        <nav style={navStyle}>
-          <button className="App-button" onClick={() => setActiveView('showCreators')}>View all creators</button>
-          <button className="App-button" onClick={() => setActiveView('addCreator')}>Add a creator</button>
-        </nav>
-      </header>
-      {renderContent()}
-    </div>
+    <Router>
+      <div className="App">
+        <header style={headerStyle}>
+          <h1 style={titleStyle}>CreatorVerse</h1>
+          <nav style={navStyle}>
+            <Link className="App-button" to="/">View all creators</Link>
+            <Link className="App-button" to="/addcreator">Add a creator</Link>
+          </nav>
+        </header>
+        <Routes>
+          <Route path="/" element={<ShowCreators creators={creators} />} />
+          <Route path="/addcreator" element={<AddCreator />} />
+          <Route path="/viewcreator/:id" element={<ViewCreator creators={creators} />} />
+          <Route path="/editcreator/:id" element={<EditCreator creators={creators} setCreators={setCreators} />} />
+
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
@@ -62,14 +70,5 @@ const navStyle = {
   justifyContent: 'center',
   marginTop: '10px',
 };
-
-// const buttonStyle = {
-//   marginLeft: '10px',
-//   padding: '10px 20px',
-//   backgroundColor: '#61dafb',
-//   border: 'none',
-//   borderRadius: '5px',
-//   cursor: 'pointer',
-// };
 
 export default App;

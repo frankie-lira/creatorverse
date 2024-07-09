@@ -1,15 +1,17 @@
 import React from 'react';
-import '../Card.css';
-import ViewCreator from '../pages/ViewCreator';
+import { Link } from 'react-router-dom';
+import '../styles/Card.css';
 
-const Card = ({ name, url, description, imageURL }) => {
+const Card = ({ id, name, description, imageURL }) => {
   return (
     <div className="card">
       <img src={imageURL} alt={`${name}'s image`} className="card-image" />
       <div className="card-info">
         <h3 className="card-name">{name}</h3>
         <p className="card-description">{description}</p>
-        <a href={url} target="_blank" rel="noopener noreferrer" className="card-link">Visit Profile</a>
+        <p className="id-check">{id}</p>
+        <Link to={`/viewcreator/${id}`} className="card-link">Visit Profile</Link>
+        <Link to={`/editcreator/${id}`} className="edit-button">Edit</Link>
       </div>
     </div>
   );

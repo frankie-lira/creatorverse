@@ -1,20 +1,19 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import Card from '../components/Card';
 
 const ViewCreator = ({ creators }) => {
   const { id } = useParams();
-  const creator = creators.find((creator) => creator.id === parseInt(id));
+  const creator = creators.find((creator) => creator.id === parseInt(id, 10));
 
   return (
     <div className="view-creator">
       {creator ? (
-        <Card 
-          name={creator.name} 
-          url={creator.url} 
-          description={creator.description} 
-          imageURL={creator.imageURL}
-        />
+        <div className="creator-details">
+          <img src={creator.imageURL} alt={`${creator.name}'s image`} className="creator-image" />
+          <h1>{creator.name}</h1>
+          <p><strong>ID:</strong> {creator.id}</p>
+          <p><strong>Description:</strong> {creator.description}</p>
+        </div>
       ) : (
         <p>Creator not found</p>
       )}

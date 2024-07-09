@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import supabase from '../client';
-import '../AddCreator.css';
+import '../styles/AddCreator.css';
 
 const AddCreator = () => {
   const [name, setName] = useState('');
