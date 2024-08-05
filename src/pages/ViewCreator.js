@@ -1,5 +1,6 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
+import '../styles/ViewCreator.css';
 
 const ViewCreator = ({ creators }) => {
   const { id } = useParams();
@@ -10,9 +11,16 @@ const ViewCreator = ({ creators }) => {
       {creator ? (
         <div className="creator-details">
           <img src={creator.imageURL} alt={`${creator.name}'s image`} className="creator-image" />
-          <h1>{creator.name}</h1>
-          <p><strong>ID:</strong> {creator.id}</p>
-          <p><strong>Description:</strong> {creator.description}</p>
+          <div className="creator-info">
+            <h1 className="creator-name">{creator.name}</h1>
+            <p className="creator-id"><strong>ID:</strong> {creator.id}</p>
+            <p className="creator-description"><strong>Description:</strong> {creator.description}</p>
+            <p className="creator-url">
+              <strong>Profile URL:</strong> 
+              <a href={creator.url} target="_blank" rel="noopener noreferrer">{creator.url}</a>
+            </p>
+            <Link to={`/editcreator/${id}`} className="edit-button">Edit Profile</Link>
+          </div>
         </div>
       ) : (
         <p>Creator not found</p>

@@ -55,4 +55,16 @@
   .submit-button:hover {
     background-color: #21a1f1;
   }
+
+  .error {
+    color: red;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .success {
+    color: green;
+    text-align: center;
+    margin-bottom: 20px;
+  }
   

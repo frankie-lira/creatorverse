@@ -41,6 +41,21 @@ const EditCreator = ({ creators, setCreators }) => {
     }
   };
 
+  const handleDelete = async () => {
+    const { error } = await supabase
+      .from('creators')
+      .delete()
+      .eq('id', id);
+
+    if (error) {
+      console.error('Error deleting data:', error.message);
+    } else {
+      const updatedCreators = creators.filter((creator) => creator.id !== parseInt(id, 10));
+      setCreators(updatedCreators);
+      navigate('/');
+    }
+  };
+
   return (
     <div className="edit-creator-container">
       <h2>Edit Creator</h2>
@@ -84,7 +99,10 @@ const EditCreator = ({ creators, setCreators }) => {
             required 
           />
         </div>
-        <button type="submit" className="submit-button">Save Changes</button>
+        <div className="form-buttons">
+          <button type="submit" className="submit-button">Save Changes</button>
+          <button type="button" className="delete-button" onClick={handleDelete}>Delete</button>
+        </div>
       </form>
     </div>
   );

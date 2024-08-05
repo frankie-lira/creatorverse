@@ -7,6 +7,8 @@ import ViewCreator from './pages/ViewCreator';
 import EditCreator from './components/EditCreator';
 
 import './styles/App.css';
+import '@picocss/pico'; // Import PicoCSS
+
 
 function App() {
   const [creators, setCreators] = useState([]);
