@@ -45,7 +45,7 @@ The following **optional** features are implemented:
 
 Here's a walkthrough of implemented required features:
 
-<blockquote class="imgur-embed-pub" lang="en" data-id="a/tDPYKtI"  ><a href="//imgur.com/a/tDPYKtI">Prework Advance web</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+<img src="https://i.imgur.com/LbgqxtO.gif" title="Video Walkthrough"  alt="Video Walkthrough" />
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with ...  👉🏿 GIF tool here
