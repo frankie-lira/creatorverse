@@ -45,7 +45,7 @@ The following **optional** features are implemented:
 
 Here's a walkthrough of implemented required features:
 
-👉🏿<img src='https://imgur.com/gallery/prework-advance-web-tDPYKtI' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+👉🏿![Video Walkthrough](https://i.imgur.com/tDPYKtI.gif "Video Walkthrough")
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with ...  👉🏿 GIF tool here
