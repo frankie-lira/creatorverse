@@ -1,10 +1,8 @@
-# WEB103 Prework - *👉🏿 Name of App Here*
+# WEB103 Prework - *👉🏿 CreatorVerse*
 
-Submitted by: **👉🏿 your name here**
+Submitted by: **👉🏿 Francisco Lira**
 
-About this web app: **👉🏿 app description here**
-
-Time spent: **👉🏿 X** hours
+Time spent: **👉🏿 24** hours
 
 ---
 
