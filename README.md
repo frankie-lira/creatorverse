@@ -1,5 +1,3 @@
----
-
 # WEB103 Prework - **CreatorVerse** 🎨
 
 **Submitted by:** **Francisco Lira** 📝  
