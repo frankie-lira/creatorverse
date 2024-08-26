@@ -45,7 +45,9 @@ The following **optional** features are implemented:
 
 Here's a walkthrough of implemented required features:
 
-<img src="https://i.imgur.com/LbgqxtO.gif" title="Video Walkthrough"  alt="Video Walkthrough" />
+https://imgur.com/gallery/prework-advance-web-tDPYKtI
+
+gif is not working, so i added direct link above.
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with ...  👉🏿 GIF tool here
