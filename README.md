@@ -46,7 +46,7 @@ Here’s a walkthrough of the implemented required features:
 GIF not working? Click the link above for the direct walkthrough.
 
 <!-- Replace this with whatever GIF tool you used! -->
-GIF created with... **[Your GIF Tool]**  
+GIF created with... **LICEcap and Imgur**  
 <!-- Recommended tools:
 [Kap](https://getkap.co/) for macOS
 [ScreenToGif](https://www.screentogif.com/) for Windows
